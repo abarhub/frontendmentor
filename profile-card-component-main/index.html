@@ -12,43 +12,73 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    :root {
+      --dark-cyan-color: hsl(185, 75%, 39%);
+      --very-dark-desaturated-blue-color: hsl(229, 23%, 23%);
+      --dark-grayish-blue-color: hsl(227, 10%, 46%);
+      --dark-grey-color: hsl(0, 0%, 59%);
+
+      --font-bold: 700;
+      --font-light: 400;
+    }
+    /*
+
+Dark cyan: hsl(185, 75%, 39%)
+Very dark desaturated blue: hsl(229, 23%, 23%)
+Dark grayish blue: hsl(227, 10%, 46%)
+
+Dark gray: hsl(0, 0%, 59%)
+
+
+    */
     body {
       font-family: "Kumbh Sans",serif;
-      font-size: 2.5em;
+      font-size: 18px;
 
       background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
-      background-position: top -300px left -300px, bottom 10px left 10px;
+      /*background-position: top -300px left -300px, bottom 10px left 10px;*/
+      background-position: left -400px top -400px,right -400px bottom -600px;
       background-repeat: no-repeat;
-      background-size: 400px;
-      background-color: darkcyan; /* hsl(185, 75%, 39%);*/
+      /*background-size: 400px;*/
+      /*background-color: darkcyan; !* hsl(185, 75%, 39%);*!*/
+      background-color: var(--dark-cyan-color) !important;
     }
 
     /*.attribution { font-size: 11px; text-align: center; }*/
     /*.attribution a { color: hsl(228, 45%, 44%); }*/
 
     .name {
-      font-weight: 700;
+      color: var(--very-dark-desaturated-blue-color);
+      font-weight: var(--font-bold);
     }
 
     .age {
-      font-weight: 400;
+      font-weight: var(--font-light);
+      color: var(--dark-grayish-blue-color);
     }
 
     .city{
-      font-weight: 400;
+      font-weight: var(--font-light);
       font-size: 14px;
+      color: var(--dark-grayish-blue-color);
     }
 
 
     .number {
-      font-weight: 700;
+      color: var(--very-dark-desaturated-blue-color);
+      font-weight: var(--font-bold);
       text-align: center;
     }
 
     .label-number {
-      font-weight: 400;
+      font-weight: var(--font-light);
       font-size: 11px;
       text-align: center;
+      color: var(--dark-grayish-blue-color);
+    }
+
+    hr {
+      color: var(--dark-grey-color);
     }
 
   </style>
@@ -69,7 +99,7 @@
   </div>
 
   <div style="margin-top: -50px;margin-left: auto; margin-right: auto">
-    <img src="images/image-victor.jpg" class="rounded-circle">
+    <img src="images/image-victor.jpg" class="rounded-circle" style="border: 5px solid white">
   </div>
 
   <div class="d-flex" style="margin-left: auto; margin-right: auto;">
