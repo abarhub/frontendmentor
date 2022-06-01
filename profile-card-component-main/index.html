@@ -5,20 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Kumbh+Sans">
+
   <title>Frontend Mentor | Profile card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      font-family: "Kumbh Sans",serif;
+      font-size: 2.5em;
+
+      background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+      background-position: top -300px left -300px, bottom 10px left 10px;
+      background-repeat: no-repeat;
+      background-size: 400px;
+      background-color: darkcyan; /* hsl(185, 75%, 39%);*/
+    }
+
+    /*.attribution { font-size: 11px; text-align: center; }*/
+    /*.attribution a { color: hsl(228, 45%, 44%); }*/
+
+    .name {
+      font-weight: 700;
+    }
+
+    .age {
+      font-weight: 400;
+    }
+
+    .city{
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+
+    .number {
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .label-number {
+      font-weight: 400;
+      font-size: 11px;
+      text-align: center;
+    }
+
   </style>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
 
 </head>
-<body style="background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg); background-color: darkcyan;">
+<body style="">
 
 <div class="container d-flex justify-content-center">
 
@@ -35,41 +74,41 @@
 
   <div class="d-flex" style="margin-left: auto; margin-right: auto;">
 
-    <div class="fw-bold mr-2">
+    <div class="name mr-2">
       Victor Crest &nbsp;
     </div>
 
-    <div class="ml-2">26</div>
+    <div class="ml-2 age">26</div>
   </div>
 
-  <div style="margin-left: auto; margin-right: auto;">London</div>
+  <div style="margin-left: auto; margin-right: auto;" class="city">London</div>
 
   <hr/>
-  <div class="d-flex  justify-content-center">
+  <div class="d-flex  justify-content-around">
 
-    <div class="d-flex flex-column p-2  justify-content-center">
-      <div class="fw-bold">
+    <div class="d-flex flex-column p-2">
+      <div class="number">
       80K
       </div>
-        <div>
+        <div class="label-number">
       Followers
         </div>
     </div>
 
     <div class="d-flex flex-column p-2">
-      <div class="fw-bold">
+      <div class="number" id="nb-like">
       803K
       </div>
-        <div>
+        <div class="label-number">
       Likes
         </div>
     </div>
 
     <div class="d-flex flex-column p-2">
-      <div class="fw-bold">
+      <div class="number" id="nb-photo">
       1.4K
       </div>
-        <div>
+        <div class="label-number">
       Photos
         </div>
     </div>
